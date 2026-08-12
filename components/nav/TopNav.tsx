@@ -64,13 +64,13 @@ export function TopNav({ user }: Props) {
 
         <div className="flex items-center gap-2">
           <Link href="/search" className="md:hidden">
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" className="size-10 md:size-8" aria-label="검색">
               <Search className="size-4" />
             </Button>
           </Link>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="flex items-center gap-2 px-2">
+              <Button variant="ghost" className="flex h-10 items-center gap-2 px-2 md:h-8">
                 <Avatar className="size-7">
                   <AvatarFallback className="bg-primary text-primary-foreground text-xs">
                     {initials}

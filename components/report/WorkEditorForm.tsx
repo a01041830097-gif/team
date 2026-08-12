@@ -89,7 +89,7 @@ export function WorkEditorForm({ date, myReports }: Props) {
             variant="outline"
             size="sm"
             onClick={() => setShowNew(true)}
-            className="h-7 gap-1 text-xs"
+            className="h-9 gap-1 text-xs md:h-7"
           >
             <Plus className="size-3" />
             업무 추가
@@ -112,7 +112,7 @@ export function WorkEditorForm({ date, myReports }: Props) {
                   variant="ghost"
                   size="sm"
                   onClick={() => { setEditId(null); setEditHtml('') }}
-                  className="h-7 text-xs gap-1"
+                  className="h-9 text-xs gap-1 md:h-7"
                 >
                   <X className="size-3" />
                   취소
@@ -121,7 +121,7 @@ export function WorkEditorForm({ date, myReports }: Props) {
                   size="sm"
                   onClick={() => handleUpdate(report.id)}
                   disabled={isPending}
-                  className="h-7 text-xs gap-1"
+                  className="h-9 text-xs gap-1 md:h-7"
                 >
                   <Check className="size-3" />
                   저장
@@ -140,12 +140,13 @@ export function WorkEditorForm({ date, myReports }: Props) {
                   size="icon-sm"
                   onClick={() => { setEditId(report.id); setEditHtml(report.content_html) }}
                   title="수정"
+                  className="size-10 md:size-7"
                 >
                   <Pencil className="size-3" />
                 </Button>
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
-                    <Button variant="ghost" size="icon-sm" title="삭제" className="text-destructive hover:text-destructive">
+                    <Button variant="ghost" size="icon-sm" title="삭제" className="size-10 text-destructive hover:text-destructive md:size-7">
                       <Trash2 className="size-3" />
                     </Button>
                   </AlertDialogTrigger>
@@ -186,7 +187,7 @@ export function WorkEditorForm({ date, myReports }: Props) {
               variant="ghost"
               size="sm"
               onClick={() => { setShowNew(false); setNewHtml('') }}
-              className="h-7 text-xs gap-1"
+              className="h-9 text-xs gap-1 md:h-7"
             >
               <X className="size-3" />
               취소
@@ -195,7 +196,7 @@ export function WorkEditorForm({ date, myReports }: Props) {
               size="sm"
               onClick={handleCreate}
               disabled={isPending}
-              className="h-7 text-xs gap-1"
+              className="h-9 text-xs gap-1 md:h-7"
             >
               <Check className="size-3" />
               저장

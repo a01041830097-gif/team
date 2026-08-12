@@ -149,7 +149,7 @@ export default function AdminMembersPage() {
         </Dialog>
       </div>
 
-      <div className="rounded-lg border border-border overflow-hidden">
+      <div className="rounded-lg border border-border overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow>
@@ -185,6 +185,7 @@ export default function AdminMembersPage() {
                       size="icon-sm"
                       onClick={() => handleToggleActive(m.id, m.is_active)}
                       title={m.is_active ? '비활성화' : '활성화'}
+                      className="size-10 md:size-7"
                     >
                       {m.is_active ? (
                         <ToggleRight className="size-4 text-green-600" />
@@ -194,7 +195,7 @@ export default function AdminMembersPage() {
                     </Button>
                     <AlertDialog>
                       <AlertDialogTrigger asChild>
-                        <Button variant="ghost" size="icon-sm" title="비밀번호 초기화">
+                        <Button variant="ghost" size="icon-sm" title="비밀번호 초기화" className="size-10 md:size-7">
                           <KeyRound className="size-4" />
                         </Button>
                       </AlertDialogTrigger>

@@ -81,9 +81,9 @@ export default function AdminReportsPage() {
           onChange={(e) => setQ(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && search()}
           placeholder="키워드 검색"
-          className="h-8 text-sm max-w-sm"
+          className="h-9 text-sm max-w-sm md:h-8"
         />
-        <Button size="sm" onClick={search} className="h-8 text-xs gap-1">
+        <Button size="sm" onClick={search} className="h-9 text-xs gap-1 md:h-8">
           <Search className="size-3" />
           검색
         </Button>
@@ -112,12 +112,13 @@ export default function AdminReportsPage() {
                       variant="ghost" size="icon-sm"
                       onClick={() => { setEditId(report.id); setEditHtml(report.content_html) }}
                       title="수정"
+                      className="size-10 md:size-7"
                     >
                       <Pencil className="size-3" />
                     </Button>
                     <AlertDialog>
                       <AlertDialogTrigger asChild>
-                        <Button variant="ghost" size="icon-sm" title="삭제" className="text-destructive hover:text-destructive">
+                        <Button variant="ghost" size="icon-sm" title="삭제" className="size-10 text-destructive hover:text-destructive md:size-7">
                           <Trash2 className="size-3" />
                         </Button>
                       </AlertDialogTrigger>
@@ -140,10 +141,10 @@ export default function AdminReportsPage() {
                   </>
                 ) : (
                   <>
-                    <Button variant="ghost" size="icon-sm" onClick={() => { setEditId(null); setEditHtml('') }} title="취소">
+                    <Button variant="ghost" size="icon-sm" onClick={() => { setEditId(null); setEditHtml('') }} title="취소" className="size-10 md:size-7">
                       <X className="size-3" />
                     </Button>
-                    <Button size="icon-sm" onClick={() => handleUpdate(report.id)} disabled={isPending} title="저장">
+                    <Button size="icon-sm" onClick={() => handleUpdate(report.id)} disabled={isPending} title="저장" className="size-10 md:size-7">
                       <Check className="size-3" />
                     </Button>
                   </>

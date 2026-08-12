@@ -67,7 +67,7 @@ export function AttendanceForm({ date, myAttendance }: Props) {
           {myAttendance && (
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button variant="outline" size="sm" className="h-7 text-xs gap-1 text-destructive border-destructive/50 hover:bg-destructive/10">
+                <Button variant="outline" size="sm" className="h-9 text-xs gap-1 text-destructive border-destructive/50 hover:bg-destructive/10 md:h-7">
                   <Trash2 className="size-3" />
                   삭제
                 </Button>
@@ -89,7 +89,7 @@ export function AttendanceForm({ date, myAttendance }: Props) {
               </AlertDialogContent>
             </AlertDialog>
           )}
-          <Button size="sm" onClick={handleSave} disabled={isPending} className="h-7 text-xs gap-1">
+          <Button size="sm" onClick={handleSave} disabled={isPending} className="h-9 text-xs gap-1 md:h-7">
             <Save className="size-3" />
             저장
           </Button>

@@ -30,7 +30,13 @@ export function WeekNavigator({ weekStart, weekRange, isCurrentWeek }: Props) {
 
   return (
     <div className="flex items-center gap-2">
-      <Button variant="outline" size="icon" onClick={() => navigate(-1)} aria-label="이전 주">
+      <Button
+        variant="outline"
+        size="icon"
+        onClick={() => navigate(-1)}
+        aria-label="이전 주"
+        className="size-10 md:size-8"
+      >
         <ChevronLeft className="size-4" />
       </Button>
       <div className="flex items-center gap-2">
@@ -38,12 +44,18 @@ export function WeekNavigator({ weekStart, weekRange, isCurrentWeek }: Props) {
         {isCurrentWeek ? (
           <Badge className="text-xs px-2">이번 주</Badge>
         ) : (
-          <Button variant="outline" size="sm" onClick={toCurrentWeek} className="text-xs h-6 px-2">
+          <Button variant="outline" size="sm" onClick={toCurrentWeek} className="text-xs h-8 px-2 md:h-6">
             이번 주로
           </Button>
         )}
       </div>
-      <Button variant="outline" size="icon" onClick={() => navigate(1)} aria-label="다음 주">
+      <Button
+        variant="outline"
+        size="icon"
+        onClick={() => navigate(1)}
+        aria-label="다음 주"
+        className="size-10 md:size-8"
+      >
         <ChevronRight className="size-4" />
       </Button>
     </div>

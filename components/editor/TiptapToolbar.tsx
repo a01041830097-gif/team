@@ -35,7 +35,7 @@ function ToolBtn({
       onClick={onClick}
       disabled={disabled}
       title={title}
-      className={cn(active && 'bg-muted text-foreground')}
+      className={cn('size-10 md:size-7', active && 'bg-muted text-foreground')}
     >
       {children}
     </Button>

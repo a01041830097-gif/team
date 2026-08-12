@@ -108,11 +108,11 @@ export function SearchFilters({ members }: Props) {
       </div>
 
       <div className="flex gap-2 mt-3 justify-end">
-        <Button variant="outline" size="sm" onClick={handleReset} className="h-8 text-xs gap-1">
+        <Button variant="outline" size="sm" onClick={handleReset} className="h-9 text-xs gap-1 md:h-8">
           <X className="size-3" />
           초기화
         </Button>
-        <Button size="sm" onClick={handleSearch} disabled={isPending} className="h-8 text-xs gap-1">
+        <Button size="sm" onClick={handleSearch} disabled={isPending} className="h-9 text-xs gap-1 md:h-8">
           <Search className="size-3" />
           검색
         </Button>

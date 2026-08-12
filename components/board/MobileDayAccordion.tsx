@@ -58,7 +58,7 @@ export function MobileDayAccordion({ weekDays, workItemsByDate, attendanceByDate
                 {workItems.length === 0 ? (
                   <Link
                     href={`/report/${day.date}`}
-                    className="flex items-center gap-1 text-xs text-muted-foreground/60 hover:text-primary transition-colors py-1 px-1"
+                    className="flex items-center gap-1 text-xs text-muted-foreground/60 hover:text-primary transition-colors py-2.5 px-1"
                   >
                     <Plus className="size-3" />
                     업무 추가
@@ -89,7 +89,7 @@ export function MobileDayAccordion({ weekDays, workItemsByDate, attendanceByDate
                 {workItems.length > 0 && (
                   <Link
                     href={`/report/${day.date}`}
-                    className="flex items-center gap-1 text-xs text-primary hover:underline transition-colors py-1 px-1"
+                    className="flex items-center gap-1 text-xs text-primary hover:underline transition-colors py-2.5 px-1"
                   >
                     <Plus className="size-3" />
                     업무 추가
